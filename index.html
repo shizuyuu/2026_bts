@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>高雄💜來去見孩子們囉～</title>
+<style>
+:root{--bg:#faf8ff;--card:#ffffff;--ink:#372f4d;--mute:#7b7192;--p:#8467cf;--p2:#b7a4ea;--soft:#efe9fc;--line:#e3daf5;--hero:linear-gradient(160deg,#efe8fd 0%,#fbf9ff 70%);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1726;--card:#251f34;--ink:#ece7f7;--mute:#a69bc1;--p:#b9a0f5;--p2:#7b61c2;--soft:#31294a;--line:#3a3253;--hero:linear-gradient(160deg,#2c2444 0%,#1b1726 70%)}}
+:root[data-theme="dark"]{--bg:#1b1726;--card:#251f34;--ink:#ece7f7;--mute:#a69bc1;--p:#b9a0f5;--p2:#7b61c2;--soft:#31294a;--line:#3a3253;--hero:linear-gradient(160deg,#2c2444 0%,#1b1726 70%)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px calc(96px + env(safe-area-inset-bottom,0px))}
+.hero{background:var(--hero);margin:0 -18px;padding:44px 22px 28px;border-bottom:1px solid var(--line)}
+.hero h1{margin:0;font-size:clamp(34px,9vw,52px);line-height:1.15;letter-spacing:.04em;color:var(--p);font-weight:800}
+.hero p{margin:8px 0 0;color:var(--mute)}
+.tabs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0 6px}
+.tabs a{padding:8px 18px;border-radius:999px;border:1px solid var(--line);color:var(--mute);text-decoration:none;font-weight:600;background:var(--card)}
+.tabs a.on{background:var(--p);border-color:var(--p);color:#fff}
+.tabs a.tl{margin-left:auto;padding:8px 2px;border:0;background:none;color:var(--p);text-decoration:underline;font-size:13px;font-weight:400}
+.tabs a:focus-visible,.chip:focus-visible,.lk:focus-visible,button:focus-visible,input:focus-visible+span{outline:2px solid var(--p);outline-offset:2px}
+[data-view]{display:none}[data-view].on{display:block}
+h2{font-size:20px;margin:30px 0 12px;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.fact b{display:block;color:var(--p)}
+.fact span{color:var(--mute);font-size:14px}
+.todo{display:inline-block;margin-left:4px;padding:0 8px;border-radius:999px;background:var(--soft);color:var(--mute);font-size:12px}
+.day{margin:0 0 18px;border-left:3px solid var(--p2);padding-left:16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.dh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line)}
+.dh b{font-size:28px;color:var(--p);letter-spacing:.02em}
+.dh em{font-style:normal;color:var(--mute)}
+.day ul{list-style:none;margin:0;padding:0}
+.day>ul>li{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line)}
+.day>ul>li:first-child{border-top:0}
+.tx small{display:block;color:var(--mute);font-size:13px;line-height:1.4}
+.note{display:block;color:var(--mute);font-size:14px}
+.sub{margin:4px 0 0 !important;padding-left:14px !important;border-left:2px solid var(--soft)}
+.sub li{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:2px 0}
+.chip{flex:none;display:inline-block;padding:2px 10px;border-radius:999px;background:var(--soft);color:var(--p);font-size:13px;text-decoration:none;white-space:nowrap}
+.chip.off{color:var(--mute);background:transparent;border:1px dashed var(--line)}
+.foot{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--line);padding:8px 18px calc(8px + env(safe-area-inset-bottom,0px))}
+.foot>.links{max-width:684px;margin:0 auto}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.lk{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:2px;min-height:44px;padding:8px 6px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;font-size:12.5px;line-height:1.35}
+.lk i{font-style:normal;font-weight:400;font-size:11px;color:var(--p)}
+.lk.off{color:var(--mute);border-style:dashed}.lk.off i{color:var(--mute)}
+.bar{height:8px;border-radius:99px;background:var(--soft);overflow:hidden;margin:6px 0 14px}
+.bar div{height:100%;width:0;background:var(--p);transition:width .25s}
+.pk{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.pk label{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line);cursor:pointer}
+.pk input{width:20px;height:20px;accent-color:var(--p);flex:none}
+.pk input:checked+span{color:var(--mute);text-decoration:line-through}
+.nt{margin-top:6px}
+.nt summary{cursor:pointer;color:var(--p);font-size:13px;width:max-content;list-style:none}
+.nt summary::-webkit-details-marker{display:none}
+.nt summary::before{content:"＋ "}
+.nt[open] summary::before{content:"－ "}
+.nt .pre{margin:6px 0;padding:8px 12px;border-radius:10px;background:var(--soft);font-size:14px;line-height:1.7}
+.nt .pre a{color:var(--p)}
+.nt textarea{display:block;width:100%;min-height:72px;margin-top:6px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;resize:vertical}
+.nt textarea:focus-visible,.nt summary:focus-visible{outline:2px solid var(--p);outline-offset:2px}
+.sv{display:block;color:var(--mute);font-size:12px;margin-top:2px}
+button{font:inherit;margin-top:14px;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--mute);cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<h1>高雄💜<br>來去見孩子們囉～</h1>
+<p>2026/11/21（六）– 11/23（一）</p>
+</header>
+<nav class="tabs" aria-label="頁面切換"><a href="#trip" data-tab="trip">行程</a><a href="#packing" data-tab="packing">演唱會必帶物</a><a class="tl" href="https://www.threads.com/share/_ymOmiGvH" target="_blank" rel="noopener">十個超猛阿米網站</a></nav>
+
+<main>
+<div data-view="trip">
+<h2>基本資訊</h2>
+<div class="facts">
+<div class="fact"><b>抵達</b>11/21 高鐵 625 次<br><span>台北 10:21 → 左營 12:20<br>7 車 2E、2D</span></div>
+<div class="fact"><b>住宿</b>In Young Hotel（旗津道酒店）<br><span>旗津三路 1050 號 3 樓</span> <a class="chip" href="https://www.google.com/maps/search/?api=1&query=In%20Young%20Hotel%20高雄市旗津區旗津三路1050號" target="_blank" rel="noopener">Google Map</a> <a class="chip" href="https://www.inyounghotel.com.tw/" target="_blank" rel="noopener">官網</a></div>
+<div class="fact"><b>離開</b>11/23 前往台南</div>
+</div>
+
+<h2>每日行程</h2>
+<div id="days"></div>
+
+</div>
+
+<div data-view="packing">
+<h2>演唱會必帶物</h2>
+<div id="count" style="color:var(--mute)"></div>
+<div class="bar"><div id="fill"></div></div>
+<ul class="pk" id="pk"></ul>
+<button id="reset" type="button">全部取消勾選</button>
+</div>
+</main>
+<footer class="foot" aria-label="相關連結"><div class="links" id="links"></div></footer>
+</div>
+
+<script>
+var m=function(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)};
+var DAYS=[
+{d:"11/21",w:"六",t:"領粽卡/周邊、演唱會",items:[
+{t:"10:21–12:20",x:"高鐵 625 次｜台北→左營",note:"7 車 2E、2D",map:"高鐵左營站"},
+{x:"🏪 IGIN 快閃",note:"高雄新光左營彩虹市集 1F",map:"新光左營彩虹市集"},
+{x:"In Young Hotel 放行李",map:"In Young Hotel 高雄市旗津區旗津三路1050號",n:["地址：高雄市旗津區旗津三路 1050 號 3 樓","交通：捷運橘線到西子灣站，步行 5 分鐘到鼓山渡輪站，搭渡輪到旗津，下船直走到底左轉。","官方網站：<a href=\"https://www.inyounghotel.com.tw/\" target=\"_blank\" rel=\"noopener\">inyounghotel.com.tw</a>","<b>可使用國旅補助</b>"]},
+{x:"午餐"},
+{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",n:["會員 QR CODE（離線儲存）","當日演唱會門票"]},
+{x:"🎁 領應援",n:["mia 果珍，其餘隨緣"]},
+{t:"16:00–17:00",x:"🎁 領取周邊"},
+{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"M12 區 14 排 7、8 號",map:"高雄世運主場館"}]},
+{d:"11/22",w:"日",t:"快閃店、領粽卡、演唱會",items:[
+{t:"9:50 入場",x:"🏪 義享時尚廣場 BTS 快閃店",note:"1F，建議 8:00 出發",map:"高雄義享時尚廣場 高雄市鼓山區大順一路115號",n:["地址：鼓山區大順一路 115 號","預估 8:00 從飯店出發，9:20–9:30 到場","路線：旗津渡輪 → 鼓山 → 西子灣站 → 捷運橘線轉紅線到凹子底站 → 步行約 10 分鐘","全程約 1 小時 15 分到 1 小時 30 分，出發前請用 Google Map 確認路況"]},
+{x:"🏪 LADOR 智旻代言快閃（巨蛋 3F）",map:"高雄巨蛋",n:["鈴蘭＆Hiroki 香味不錯！"]},
+{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",n:["會員 QR CODE（離線儲存）","當日演唱會門票"]},
+{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"2 樓 H06 區 7 排 341、342 號",map:"高雄世運主場館"}]},
+{d:"11/23",w:"一",t:"奇美埃及展",items:[
+{x:"前往台南"},
+{x:"奇美埃及展",map:"奇美博物館"}]}
+];
+var LINKS=[
+{n:"🪄 努力練應援",u:"https://army.uubox.tw/"},
+{n:"官方公告：ARMY ZONE 營運公告",u:"https://weverse.io/bts/notice/39838?hl=zh-tw"},
+{n:"官方公告：手燈使用指南",u:"https://weverse.io/bts/notice/41022?hl=zh-tw"}
+];
+var PACK=["手燈","備用電池","眼藥水","龍角散","小杯水","票","證件","APP 連結","CR 果珍娃","吊飾（隨緣應援）","髮圈","購物袋","濕紙巾","行動電源","有空間的手機"];
+function chip(i){
+  if(i.map)return '<a class="chip" href="'+m(i.map)+'" target="_blank" rel="noopener">Google Map</a>';
+  if(i.pend)return '<span class="chip off">地圖待補</span>';
+  return "";
+}
+var NT={};
+try{NT=JSON.parse(localStorage.getItem("kh-notes")||"{}")||{}}catch(e){NT={}}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function notes(k,n){
+  return '<details class="nt"><summary>備註</summary>'+(n?'<div class="pre">'+n.join("<br>")+'</div>':"")+'<textarea data-k="'+k+'" placeholder="輸入自己的備註" aria-label="備註">'+esc(NT[k]||"")+'</textarea><span class="sv">自動儲存在這支裝置上</span></details>';
+}
+document.getElementById("days").innerHTML=DAYS.map(function(d,di){
+  return '<section class="day"><div class="dh"><b>'+d.d+'</b><span>週'+d.w+'</span><em>'+d.t+'</em></div><ul>'+
+  d.items.map(function(i,ii){
+    var sub=i.sub?'<ul class="sub">'+i.sub.map(function(s){return '<li>'+s.x+' '+chip(s)+'</li>'}).join("")+'</ul>':"";
+    return '<li><div class="tx">'+(i.t?'<small>'+i.t+'</small>':"")+i.x+(i.note?'<span class="note">'+i.note+'</span>':"")+sub+notes(di+"-"+ii,i.n)+'</div>'+(i.sub?"":chip(i))+'</li>';
+  }).join("")+'</ul></section>';
+}).join("");
+document.getElementById("days").addEventListener("input",function(e){
+  var k=e.target.getAttribute("data-k");
+  if(k===null)return;
+  NT[k]=e.target.value;
+  try{localStorage.setItem("kh-notes",JSON.stringify(NT))}catch(err){}
+});
+document.getElementById("links").innerHTML=LINKS.map(function(l){
+  return l.u?'<a class="lk" href="'+l.u+'" target="_blank" rel="noopener">'+l.n+'<i>開啟連結</i></a>':'<div class="lk off">'+l.n+'<i>連結待補</i></div>';
+}).join("");
+
+var st={};
+try{st=JSON.parse(localStorage.getItem("kh-pack")||"{}")||{}}catch(e){st={}}
+function save(){try{localStorage.setItem("kh-pack",JSON.stringify(st))}catch(e){}}
+function prog(){
+  var n=0;PACK.forEach(function(_,i){if(st[i])n++});
+  document.getElementById("count").textContent="已準備 "+n+" / "+PACK.length;
+  document.getElementById("fill").style.width=(n/PACK.length*100)+"%";
+}
+function drawPack(){
+  document.getElementById("pk").innerHTML=PACK.map(function(p,i){
+    return '<li><label><input type="checkbox" data-i="'+i+'"'+(st[i]?" checked":"")+'><span>'+p+'</span></label></li>';
+  }).join("");
+  prog();
+}
+document.getElementById("pk").addEventListener("change",function(e){
+  var i=e.target.getAttribute("data-i");
+  if(i===null)return;
+  st[i]=e.target.checked;save();prog();
+});
+document.getElementById("reset").addEventListener("click",function(){st={};save();drawPack()});
+drawPack();
+
+function route(){
+  var v=location.hash==="#packing"?"packing":"trip";
+  document.querySelectorAll("[data-view]").forEach(function(el){el.classList.toggle("on",el.getAttribute("data-view")===v)});
+  document.querySelectorAll("[data-tab]").forEach(function(el){el.classList.toggle("on",el.getAttribute("data-tab")===v)});
+}
+window.addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
