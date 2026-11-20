@@ -60,6 +60,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nt[open] summary::before{content:"－ "}
 .nt .pre{margin:6px 0;padding:8px 12px;border-radius:10px;background:var(--soft);font-size:14px;line-height:1.7}
 .nt .pre a{color:var(--p)}
+.red{color:#d92d20;font-weight:800}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .red{color:#ff7b72}}
+:root[data-theme="dark"] .red{color:#ff7b72}
 .nt textarea{display:block;width:100%;min-height:72px;margin-top:6px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;resize:vertical}
 .nt textarea:focus-visible,.nt summary:focus-visible{outline:2px solid var(--p);outline-offset:2px}
 .sv{display:block;color:var(--mute);font-size:12px;margin-top:2px}
@@ -102,21 +105,28 @@ button{font:inherit;margin-top:14px;padding:8px 18px;border-radius:999px;border:
 <script>
 var m=function(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)};
 var DAYS=[
-{d:"11/21",w:"六",t:"領粽卡/周邊、演唱會",items:[
+{d:"11/21",w:"六",t:"放行李、領粽卡/周邊、演唱會",items:[
 {t:"10:21–12:20",x:"高鐵 625 次｜台北→左營",note:"7 車 2E、2D",map:"高鐵左營站"},
-{x:"🏪 IGIN 快閃",note:"高雄新光左營彩虹市集 1F",map:"新光左營彩虹市集"},
-{x:"In Young Hotel 放行李",map:"In Young Hotel 高雄市旗津區旗津三路1050號",n:["地址：高雄市旗津區旗津三路 1050 號 3 樓","交通：捷運橘線到西子灣站，步行 5 分鐘到鼓山渡輪站，搭渡輪到旗津，下船直走到底左轉。","官方網站：<a href=\"https://www.inyounghotel.com.tw/\" target=\"_blank\" rel=\"noopener\">inyounghotel.com.tw</a>","<b>可使用國旅補助</b>"]},
-{x:"午餐"},
-{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",n:["會員 QR CODE（離線儲存）","當日演唱會門票"]},
+{t:"12:30",x:"前往鼓山渡輪站",note:"二選一：捷運或叫車",map:"鼓山渡輪站",n:["1. 捷運：搭捷運到哈瑪星，轉鼓山渡輪站（預估 45–50 分鐘）","2. 叫車：直接叫車到鼓山渡輪站（預估 25–30 分鐘）","接著搭渡輪到旗津"]},
+{t:"約 13:30",x:"In Young Hotel 放行李",map:"In Young Hotel 高雄市旗津區旗津三路1050號",n:["地址：高雄市旗津區旗津三路 1050 號 3 樓","交通：下船後直走到底左轉","官方網站：<a href='https://www.inyounghotel.com.tw/' target='_blank' rel='noopener'>inyounghotel.com.tw</a>","<b>可使用國旅補助</b>"]},
+{t:"13:35",x:"簡易午餐",note:"30 分鐘內解決"},
+{t:"14:05",x:"搭渡輪回鼓山，叫車去世運",note:"14:05 前要搭上回程渡輪",n:["14:05 前沒搭上渡輪，就直接在旗津叫車去世運","世運大道交通管制，車子可能得在外圍下車再步行"]},
+{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",note:"<b class='red'>必須都要在15:00前開始排</b>",n:["預估 14:55 前後到場，幾乎沒有緩衝","會員 QR CODE（離線儲存）","當日演唱會門票","地點與排隊方式以官方公告為準"]},
 {x:"🎁 領應援",n:["mia 果珍，其餘隨緣"]},
 {t:"16:00–17:00",x:"🎁 領取周邊",n:["記得 QR code 離線儲存"]},
-{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"M12 區 14 排 7、8 號",map:"高雄世運主場館"}]},
+{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"M12 區 14 排 7、8 號",map:"高雄世運主場館"},
+{t:"演唱會後",x:"叫車直達鼓山渡輪站",note:"再搭渡輪回旗津",map:"鼓山渡輪站",n:["渡輪末班時間請先確認，趕不上就改叫車直達飯店"]}]},
 {d:"11/22",w:"日",t:"快閃店、領粽卡、演唱會",items:[
-{t:"9:50 入場",x:"🏪 義享時尚廣場 BTS 快閃店",note:"1F，建議 8:00 出發",map:"高雄義享時尚廣場 高雄市鼓山區大順一路115號",n:["地址：鼓山區大順一路 115 號","<a href=\"https://bts-popup-booking.venue.zone/zh/mypage\" target=\"_blank\" rel=\"noopener\">入場連結</a>","預估 8:00 從飯店出發，9:20–9:30 到場","路線：旗津渡輪 → 鼓山 → 西子灣站 → 捷運橘線轉紅線到凹子底站 → 步行約 10 分鐘","全程約 1 小時 15 分到 1 小時 30 分，出發前請用 Google Map 確認路況"]},
-{x:"🏪 LADOR 智旻代言快閃（巨蛋 3F）",map:"高雄巨蛋",n:["鈴蘭＆Hiroki 香味不錯！"]},
-{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",n:["會員 QR CODE（離線儲存）","當日演唱會門票"]},
-{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"2 樓 H06 區 7 排 341、342 號",map:"高雄世運主場館"}]},
+{t:"9:50 入場",x:"🏪 義享時尚廣場 BTS 快閃店",note:"1F，建議 8:00 出發",map:"高雄義享時尚廣場 高雄市鼓山區大順一路115號",n:["地址：鼓山區大順一路 115 號","<a href='https://bts-popup-booking.venue.zone/zh/mypage' target='_blank' rel='noopener'>入場連結</a>","預估 8:00 從飯店出發，9:20–9:30 到場","路線：旗津渡輪 → 鼓山 → 西子灣站 → 捷運橘線轉紅線到凹子底站 → 步行約 10 分鐘","全程約 1 小時 15 分到 1 小時 30 分，出發前請用 Google Map 確認路況"]},
+{t:"約 11:15",x:"🏪 LADOR 智旻代言快閃（巨蛋 3F）",map:"高雄巨蛋",n:["鈴蘭＆Hiroki 香味不錯！"]},
+{t:"12:15",x:"🏪 IGIN 快閃",note:"高雄新光左營彩虹市集 1F",map:"新光左營彩虹市集"},
+{t:"13:00",x:"簡易午餐",note:"30 分鐘內解決"},
+{t:"11:00–17:00",x:"🎁 領取 ARMY ZONE",note:"<b class='red'>必須都要在15:00前開始排</b>",n:["預計 14:00 出發，14:30 到場開始排（留 30 分鐘緩衝）","搭捷運紅線到世運站，再步行 5–8 分鐘","會員 QR CODE（離線儲存）","當日演唱會門票","地點與排隊方式以官方公告為準"]},
+{x:"面交shooky娃"},
+{t:"16:30 入場，19:00 開始",x:"🎤 演唱會",note:"2 樓 H06 區 7 排 341、342 號",map:"高雄世運主場館"},
+{t:"演唱會後",x:"叫車直達鼓山渡輪站",note:"再搭渡輪回旗津",map:"鼓山渡輪站",n:["渡輪末班時間請先確認，趕不上就改叫車直達飯店"]}]},
 {d:"11/23",w:"一",t:"奇美埃及展",items:[
+{x:"🏪 IGIN 快閃（有空再去）",note:"高雄新光左營彩虹市集 1F，營業時間請先確認",map:"新光左營彩虹市集"},
 {x:"前往台南"},
 {x:"奇美埃及展",map:"奇美博物館"}]}
 ];
